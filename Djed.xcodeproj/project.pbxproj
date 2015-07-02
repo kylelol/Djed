@@ -13,6 +13,16 @@
 		2742996F1B44C4120017795E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2742996E1B44C4120017795E /* Images.xcassets */; };
 		274299721B44C4120017795E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274299701B44C4120017795E /* LaunchScreen.xib */; };
 		2742997E1B44C4120017795E /* DjedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2742997D1B44C4120017795E /* DjedTests.swift */; };
+		274299A21B44D0F00017795E /* MKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2742999B1B44D0F00017795E /* MKButton.swift */; };
+		274299A31B44D0F00017795E /* MKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2742999C1B44D0F00017795E /* MKColor.swift */; };
+		274299A41B44D0F00017795E /* MKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2742999D1B44D0F00017795E /* MKImageView.swift */; };
+		274299A51B44D0F00017795E /* MKLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2742999E1B44D0F00017795E /* MKLabel.swift */; };
+		274299A61B44D0F00017795E /* MKLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2742999F1B44D0F00017795E /* MKLayer.swift */; };
+		274299A71B44D0F00017795E /* MKTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274299A01B44D0F00017795E /* MKTableViewCell.swift */; };
+		274299A81B44D0F00017795E /* MKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274299A11B44D0F00017795E /* MKTextField.swift */; };
+		274299AA1B44D3AE0017795E /* KKFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274299A91B44D3AE0017795E /* KKFloatingActionButton.swift */; };
+		274299AD1B44F1230017795E /* FloatingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274299AC1B44F1230017795E /* FloatingTableViewCell.xib */; };
+		274299AF1B44FDC20017795E /* FloatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274299AE1B44FDC20017795E /* FloatTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,16 @@
 		274299771B44C4120017795E /* DjedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DjedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2742997C1B44C4120017795E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2742997D1B44C4120017795E /* DjedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DjedTests.swift; sourceTree = "<group>"; };
+		2742999B1B44D0F00017795E /* MKButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKButton.swift; sourceTree = "<group>"; };
+		2742999C1B44D0F00017795E /* MKColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKColor.swift; sourceTree = "<group>"; };
+		2742999D1B44D0F00017795E /* MKImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKImageView.swift; sourceTree = "<group>"; };
+		2742999E1B44D0F00017795E /* MKLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKLabel.swift; sourceTree = "<group>"; };
+		2742999F1B44D0F00017795E /* MKLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKLayer.swift; sourceTree = "<group>"; };
+		274299A01B44D0F00017795E /* MKTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKTableViewCell.swift; sourceTree = "<group>"; };
+		274299A11B44D0F00017795E /* MKTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKTextField.swift; sourceTree = "<group>"; };
+		274299A91B44D3AE0017795E /* KKFloatingActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKFloatingActionButton.swift; sourceTree = "<group>"; };
+		274299AC1B44F1230017795E /* FloatingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FloatingTableViewCell.xib; sourceTree = "<group>"; };
+		274299AE1B44FDC20017795E /* FloatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +97,15 @@
 		274299641B44C4120017795E /* Djed */ = {
 			isa = PBXGroup;
 			children = (
+				274299AB1B44F0F60017795E /* FloatinAction */,
+				2742999A1B44D0F00017795E /* Source */,
 				274299671B44C4120017795E /* AppDelegate.swift */,
 				274299691B44C4120017795E /* ViewController.swift */,
 				2742996B1B44C4120017795E /* Main.storyboard */,
 				2742996E1B44C4120017795E /* Images.xcassets */,
 				274299701B44C4120017795E /* LaunchScreen.xib */,
 				274299651B44C4120017795E /* Supporting Files */,
+				274299A91B44D3AE0017795E /* KKFloatingActionButton.swift */,
 			);
 			path = Djed;
 			sourceTree = "<group>";
@@ -110,6 +133,29 @@
 				2742997C1B44C4120017795E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2742999A1B44D0F00017795E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2742999B1B44D0F00017795E /* MKButton.swift */,
+				2742999C1B44D0F00017795E /* MKColor.swift */,
+				2742999D1B44D0F00017795E /* MKImageView.swift */,
+				2742999E1B44D0F00017795E /* MKLabel.swift */,
+				2742999F1B44D0F00017795E /* MKLayer.swift */,
+				274299A01B44D0F00017795E /* MKTableViewCell.swift */,
+				274299A11B44D0F00017795E /* MKTextField.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		274299AB1B44F0F60017795E /* FloatinAction */ = {
+			isa = PBXGroup;
+			children = (
+				274299AC1B44F1230017795E /* FloatingTableViewCell.xib */,
+				274299AE1B44FDC20017795E /* FloatTableViewCell.swift */,
+			);
+			name = FloatinAction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +207,7 @@
 				TargetAttributes = {
 					274299611B44C4120017795E = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 34UDU57LAY;
 					};
 					274299761B44C4120017795E = {
 						CreatedOnToolsVersion = 6.4;
@@ -193,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2742996D1B44C4120017795E /* Main.storyboard in Resources */,
+				274299AD1B44F1230017795E /* FloatingTableViewCell.xib in Resources */,
 				274299721B44C4120017795E /* LaunchScreen.xib in Resources */,
 				2742996F1B44C4120017795E /* Images.xcassets in Resources */,
 			);
@@ -212,8 +260,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274299A81B44D0F00017795E /* MKTextField.swift in Sources */,
+				274299AA1B44D3AE0017795E /* KKFloatingActionButton.swift in Sources */,
+				274299A51B44D0F00017795E /* MKLabel.swift in Sources */,
+				274299A21B44D0F00017795E /* MKButton.swift in Sources */,
+				274299AF1B44FDC20017795E /* FloatTableViewCell.swift in Sources */,
+				274299A41B44D0F00017795E /* MKImageView.swift in Sources */,
+				274299A71B44D0F00017795E /* MKTableViewCell.swift in Sources */,
+				274299A61B44D0F00017795E /* MKLayer.swift in Sources */,
 				2742996A1B44C4120017795E /* ViewController.swift in Sources */,
 				274299681B44C4120017795E /* AppDelegate.swift in Sources */,
+				274299A31B44D0F00017795E /* MKColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +351,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "004e3b3a-17c0-458c-ba44-29325fc1ed50";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -332,6 +390,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "004e3b3a-17c0-458c-ba44-29325fc1ed50";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -342,9 +401,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Djed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "004e3b3a-17c0-458c-ba44-29325fc1ed50";
 			};
 			name = Debug;
 		};
@@ -352,9 +414,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Djed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "004e3b3a-17c0-458c-ba44-29325fc1ed50";
 			};
 			name = Release;
 		};
@@ -411,6 +476,7 @@
 				274299831B44C4120017795E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		274299841B44C4120017795E /* Build configuration list for PBXNativeTarget "DjedTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +485,7 @@
 				274299861B44C4120017795E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

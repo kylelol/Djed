@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Djed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdP-xO-DZa" customClass="KKFloatingActionButton" customModule="Djed" customModuleProvider="target">
+                                <rect key="frame" x="520" y="520" width="60" height="60"/>
+                                <subviews>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cc-5s-4oz" customClass="MKButton" customModule="Djed" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="5" width="50" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="K8r-JW-BEr"/>
+                                            <constraint firstAttribute="height" constant="50" id="vwW-4J-jyC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapButton:" destination="UdP-xO-DZa" eventType="touchUpInside" id="4hy-Md-kBT"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plusImage" translatesAutoresizingMaskIntoConstraints="NO" id="KFW-WG-fy6">
+                                        <rect key="frame" x="15" y="15" width="30" height="30"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="B4x-xg-dMm"/>
+                                    <constraint firstAttribute="height" constant="60" id="QfL-RZ-0mv"/>
+                                    <constraint firstAttribute="centerY" secondItem="7cc-5s-4oz" secondAttribute="centerY" id="xGK-r6-DtX"/>
+                                    <constraint firstAttribute="centerX" secondItem="7cc-5s-4oz" secondAttribute="centerX" id="xeo-Iz-3HT"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="button" destination="7cc-5s-4oz" id="pHA-3w-Osg"/>
+                                    <outlet property="imageView" destination="KFW-WG-fy6" id="UDU-Yp-s79"/>
+                                </connections>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56a-XR-26J">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="BFC-TY-w3T"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.070588235289999995" green="0.46274509800000002" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Stream" id="aRb-3u-crA">
+                                        <barButtonItem key="leftBarButtonItem" image="menuImage" id="2DQ-iO-kBh">
+                                            <inset key="imageInsets" minX="-2" minY="13" maxX="31" maxY="9"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="56a-XR-26J" secondAttribute="trailing" id="Eh3-7a-2fj"/>
+                            <constraint firstAttribute="trailing" secondItem="UdP-xO-DZa" secondAttribute="trailing" constant="20" id="Kfe-Wg-KWQ"/>
+                            <constraint firstItem="56a-XR-26J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eYk-ua-LxX"/>
+                            <constraint firstAttribute="bottom" secondItem="UdP-xO-DZa" secondAttribute="bottom" constant="20" id="igu-xB-WNJ"/>
+                            <constraint firstItem="56a-XR-26J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uJ6-WZ-tI0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="UdP-xO-DZa" id="nN1-x7-nex"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="menuImage" width="50" height="40"/>
+        <image name="plusImage" width="50" height="50"/>
+    </resources>
 </document>
