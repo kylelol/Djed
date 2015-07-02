@@ -10,6 +10,9 @@ import UIKit
 
 class FloatTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var iconLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var labelView: UIView!
     @IBOutlet weak var iconView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,7 +21,16 @@ class FloatTableViewCell: UITableViewCell {
         self.backgroundColor = UIColor.clearColor()
         self.contentView.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI))
         self.selectionStyle = .None
-        self.iconView.layer.cornerRadius = 15.0
+        self.iconView.layer.cornerRadius = 20.0
+        iconView.layer.shadowOpacity = 0.7
+        iconView.layer.shadowRadius = 3.5
+        iconView.layer.shadowColor = UIColor.darkGrayColor().CGColor
+        iconView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        
+        labelView.layer.shadowOpacity = 0.7
+        labelView.layer.shadowRadius = 3.5
+        labelView.layer.shadowColor = UIColor.darkGrayColor().CGColor
+        labelView.layer.shadowOffset = CGSize(width: 0, height: 3)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

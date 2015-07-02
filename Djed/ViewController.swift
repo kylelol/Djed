@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         
         
         addButton.setUpViews()
+        addButton.tableDelegate = self
     }
     
     @IBAction func didTapAddButton(sender: AnyObject) {
@@ -32,5 +33,11 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController: KKFloatingActionButtonDelegate {
+    func didTapCellAtIndexPath(indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("AddContactSegue", sender: nil)
+    }
 }
 

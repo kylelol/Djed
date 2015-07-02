@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol KKFloatingActionButtonDelegate: class {
+    func didTapCellAtIndexPath(indexPath: NSIndexPath)
+}
+
 class KKFloatingActionButton: UIView {
     
     let screenWidth = UIScreen.mainScreen().bounds.size.width
@@ -16,6 +20,7 @@ class KKFloatingActionButton: UIView {
     @IBOutlet weak var button: MKButton!
     @IBOutlet weak var imageView: UIImageView!
     weak var scrollView: UIScrollView?
+    weak var tableDelegate: KKFloatingActionButtonDelegate?
     var bgView: UIView?
     var windowView: UIView?
     var isMenuVisible = false
@@ -29,7 +34,7 @@ class KKFloatingActionButton: UIView {
         windowView = UIView(frame: UIScreen.mainScreen().bounds)
         
         bgView = UIView(frame: UIScreen.mainScreen().bounds)
-        bgView?.backgroundColor = UIColor.darkGrayColor()
+        bgView?.backgroundColor = UIColor.whiteColor()
         bgView?.userInteractionEnabled = true
         bgView?.alpha = 0
         bgView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "didTapBgView:"))
@@ -156,21 +161,47 @@ extension KKFloatingActionButton: UITableViewDelegate {
         }, completion: nil)
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.showMenu()
+        self.tableDelegate?.didTapCellAtIndexPath(indexPath)
+    }
+    
 }
 
 extension KKFloatingActionButton: UITableViewDataSource {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50.0
+        return 60.0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("FloatCell") as! UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("FloatCell") as! FloatTableViewCell
+        
+        let data = dataForIndexPath(indexPath)
+        
+        var attrString = NSMutableAttributedString(string: data.0)
+        attrString.addAttribute(NSKernAttributeName, value: 4.0, range: NSMakeRange(0, attrString.length))
+        cell.iconLabel.attributedText = attrString
+        cell.iconImageView.image = UIImage(named: data.1)
+        
+
         
         return cell
+    }
+    
+    private func dataForIndexPath(indexPath: NSIndexPath) -> (String, String) {
+        
+        switch indexPath.row {
+        case 0: return ("CONTACT", "contactImage")
+        case 1: return ("EVENT", "eventImage")
+        case 2: return ("ALBUM", "albumImage")
+        case 3: return ("LIST", "listImage")
+        default: return ("", "")
+        }
     }
 }
