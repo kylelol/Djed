@@ -53,17 +53,19 @@
                                     <outlet property="imageView" destination="KFW-WG-fy6" id="UDU-Yp-s79"/>
                                 </connections>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56a-XR-26J">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56a-XR-26J">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="BFC-TY-w3T"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.070588235289999995" green="0.46274509800000002" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="30"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textShadowColor" red="0.25882352939999997" green="0.31372549020000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Stream" id="aRb-3u-crA">
+                                    <navigationItem title="STREAM" id="aRb-3u-crA">
                                         <barButtonItem key="leftBarButtonItem" image="menuImage" id="2DQ-iO-kBh">
                                             <inset key="imageInsets" minX="-2" minY="13" maxX="31" maxY="9"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
