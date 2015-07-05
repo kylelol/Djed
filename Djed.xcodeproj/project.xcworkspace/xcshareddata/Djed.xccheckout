@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B91A26B7-3283-468B-8F67-6B425F8FDA82</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Djed</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>AB7D05D4F7297C6ACA6EA13CE2DEB88B7F291856</key>
 		<string>https://github.com/kylelol/Djed.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Djed.xcodeproj</string>
+	<string>Djed.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>AB7D05D4F7297C6ACA6EA13CE2DEB88B7F291856</key>

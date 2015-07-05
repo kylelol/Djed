@@ -5,6 +5,12 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MYRIADPRO-REGULAR.OTF">
+            <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -74,7 +80,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="56a-XR-26J" secondAttribute="trailing" id="Eh3-7a-2fj"/>
                             <constraint firstAttribute="trailing" secondItem="UdP-xO-DZa" secondAttribute="trailing" constant="20" id="Kfe-Wg-KWQ"/>
@@ -114,11 +120,71 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7P-aW-JBc" customClass="SpringView" customModule="Djed" customModuleProvider="target">
                                 <rect key="frame" x="90" y="90" width="420" height="420"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD CONTACT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oe-bb-erb">
+                                        <rect key="frame" x="133" y="10" width="155" height="25"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="25"/>
+                                        <color key="textColor" red="0.070588235289999995" green="0.46274509800000002" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8I-ca-D3m" customClass="MKTextField" customModule="Djed" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="50" width="380" height="40"/>
+                                        <color key="tintColor" red="0.070588235289999995" green="0.46274509800000002" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jFM-fB-RhA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FEb-pQ-B38" customClass="MKTextField" customModule="Djed" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="105" width="380" height="40"/>
+                                        <color key="tintColor" red="0.070588235289999995" green="0.46274509800000002" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5Sp-1G-3Jp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I35-EQ-ywP" customClass="MKButton" customModule="Djed" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="360" width="360" height="50"/>
+                                        <color key="backgroundColor" red="0.070588235289999995" green="0.46274509800000002" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="eoJ-cE-nPk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
+                                        <state key="normal" title="SAVE">
+                                            <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTappAddButton:" destination="pRb-Wv-UPw" eventType="touchUpInside" id="mJL-jn-2Hp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Q8I-ca-D3m" firstAttribute="top" secondItem="0oe-bb-erb" secondAttribute="bottom" constant="15" id="0vj-S0-paC"/>
+                                    <constraint firstAttribute="centerX" secondItem="I35-EQ-ywP" secondAttribute="centerX" constant="-5" id="BZa-Ro-ATc"/>
+                                    <constraint firstItem="I35-EQ-ywP" firstAttribute="leading" secondItem="C7P-aW-JBc" secondAttribute="leading" constant="30" id="DED-xb-Umb"/>
+                                    <constraint firstItem="FEb-pQ-B38" firstAttribute="top" secondItem="Q8I-ca-D3m" secondAttribute="bottom" constant="15" id="HTw-PP-rqN"/>
+                                    <constraint firstItem="FEb-pQ-B38" firstAttribute="leading" secondItem="C7P-aW-JBc" secondAttribute="leading" constant="20" id="SVD-Km-y1b"/>
+                                    <constraint firstItem="0oe-bb-erb" firstAttribute="top" secondItem="C7P-aW-JBc" secondAttribute="top" constant="10" id="SvJ-NM-JFf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q8I-ca-D3m" secondAttribute="trailing" constant="20" id="UzH-QF-fkL"/>
+                                    <constraint firstAttribute="bottom" secondItem="I35-EQ-ywP" secondAttribute="bottom" constant="10" id="VzJ-jU-MMY"/>
+                                    <constraint firstAttribute="trailing" secondItem="I35-EQ-ywP" secondAttribute="trailing" constant="30" id="XZi-vw-X1B"/>
+                                    <constraint firstAttribute="centerX" secondItem="0oe-bb-erb" secondAttribute="centerX" id="bTI-rG-MDO"/>
+                                    <constraint firstAttribute="trailing" secondItem="FEb-pQ-B38" secondAttribute="trailing" constant="20" id="bxT-bI-EO1"/>
+                                    <constraint firstItem="Q8I-ca-D3m" firstAttribute="leading" secondItem="C7P-aW-JBc" secondAttribute="leading" constant="20" id="jYF-NI-1Hc"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeDown"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BZa-Ro-ATc"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -134,7 +200,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="I35-EQ-ywP" id="WEk-gh-FxQ"/>
                         <outlet property="containerView" destination="C7P-aW-JBc" id="bfy-8a-nS0"/>
+                        <outlet property="nameTextField" destination="Q8I-ca-D3m" id="sZ1-S0-7ah"/>
+                        <outlet property="numberTextField" destination="FEb-pQ-B38" id="nOx-ON-aAn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFg-ZL-CtW" userLabel="First Responder" sceneMemberID="firstResponder"/>

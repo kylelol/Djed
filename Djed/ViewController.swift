@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         
         addButton.setUpViews()
         addButton.tableDelegate = self
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didDissmissAddContact:", name: "DidDismissAddContactVCNotification", object: nil)
     }
     
     @IBAction func didTapAddButton(sender: AnyObject) {
@@ -31,6 +33,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func didDissmissAddContact(notification: NSNotification) {
+        UIView.animateWithDuration(0.1, animations: { () -> Void in
+            self.addButton.alpha = 1.0
+        })
+    }
 
 
 }
@@ -38,6 +46,9 @@ class ViewController: UIViewController {
 extension ViewController: KKFloatingActionButtonDelegate {
     func didTapCellAtIndexPath(indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("AddContactSegue", sender: nil)
+        UIView.animateWithDuration(0.1, animations: { () -> Void in
+            self.addButton.alpha = 0.0
+        })
     }
 }
 
