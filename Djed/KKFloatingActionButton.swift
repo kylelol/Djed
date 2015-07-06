@@ -56,10 +56,10 @@ class KKFloatingActionButton: UIView {
         button.ripplePercent = 1.75
         button.rippleLocation = .Center
         
-        button.layer.shadowOpacity = 0.7
-        button.layer.shadowRadius = 3.5
-        button.layer.shadowColor = UIColor.darkGrayColor().CGColor
-        button.layer.shadowOffset = CGSize(width: 0, height: 3)
+        button.layer.shadowOpacity = 0.3
+        button.layer.shadowRadius = 7
+        button.layer.shadowColor = UIColor.blackColor().CGColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 2)
         
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "handleTap:"))
         
@@ -185,7 +185,7 @@ extension KKFloatingActionButton: UITableViewDataSource {
         let data = dataForIndexPath(indexPath)
         
         var attrString = NSMutableAttributedString(string: data.0)
-        attrString.addAttribute(NSKernAttributeName, value: 4.0, range: NSMakeRange(0, attrString.length))
+        attrString.addAttribute(NSKernAttributeName, value: 2.0, range: NSMakeRange(0, attrString.length))
         cell.iconLabel.attributedText = attrString
         cell.iconImageView.image = UIImage(named: data.1)
         

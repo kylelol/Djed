@@ -22,15 +22,16 @@ class FloatTableViewCell: UITableViewCell {
         self.contentView.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI))
         self.selectionStyle = .None
         self.iconView.layer.cornerRadius = 20.0
-        iconView.layer.shadowOpacity = 0.7
-        iconView.layer.shadowRadius = 3.5
-        iconView.layer.shadowColor = UIColor.darkGrayColor().CGColor
-        iconView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        iconView.layer.shadowOpacity = 0.3
+        iconView.layer.shadowRadius = 5.5
+        iconView.layer.shadowColor = UIColor.blackColor().CGColor
+        iconView.layer.shadowOffset = CGSize(width: 0, height: 1.5)
         
-        labelView.layer.shadowOpacity = 0.7
-        labelView.layer.shadowRadius = 3.5
-        labelView.layer.shadowColor = UIColor.darkGrayColor().CGColor
-        labelView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        labelView.layer.cornerRadius = 4.0
+        labelView.layer.shadowOpacity = 0.3
+        labelView.layer.shadowRadius = 1
+        labelView.layer.shadowColor = UIColor.blackColor().CGColor
+        labelView.layer.shadowOffset = CGSize(width: 0, height: 0.5)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

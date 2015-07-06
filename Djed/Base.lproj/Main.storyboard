@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -24,8 +24,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="437" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FDT-Nq-wEN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.89019607840000003" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="SFk-YG-8sb">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SFk-YG-8sb" id="qro-Uk-1WN">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="stream_card" translatesAutoresizingMaskIntoConstraints="NO" id="eoU-5Y-zLO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="436"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.89019607840000003" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="eoU-5Y-zLO" secondAttribute="trailing" id="7ZS-gd-CZL"/>
+                                                <constraint firstItem="eoU-5Y-zLO" firstAttribute="top" secondItem="qro-Uk-1WN" secondAttribute="top" id="aqo-Q3-NGN"/>
+                                                <constraint firstItem="eoU-5Y-zLO" firstAttribute="leading" secondItem="qro-Uk-1WN" secondAttribute="leading" id="f5a-4s-vMJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="eoU-5Y-zLO" secondAttribute="bottom" id="kVo-lw-rNE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.89019607840000003" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="64x-kt-vE2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ifB-zA-p2f"/>
+                                </connections>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdP-xO-DZa" customClass="KKFloatingActionButton" customModule="Djed" customModuleProvider="target">
-                                <rect key="frame" x="520" y="520" width="60" height="60"/>
+                                <rect key="frame" x="526" y="526" width="60" height="60"/>
                                 <subviews>
                                     <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cc-5s-4oz" customClass="MKButton" customModule="Djed" customModuleProvider="target">
                                         <rect key="frame" x="5" y="5" width="50" height="50"/>
@@ -44,8 +73,8 @@
                                             <action selector="didTapButton:" destination="UdP-xO-DZa" eventType="touchUpInside" id="4hy-Md-kBT"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plusImage" translatesAutoresizingMaskIntoConstraints="NO" id="KFW-WG-fy6">
-                                        <rect key="frame" x="15" y="15" width="30" height="30"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus_sign" translatesAutoresizingMaskIntoConstraints="NO" id="KFW-WG-fy6">
+                                        <rect key="frame" x="18" y="17" width="25" height="25"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -71,26 +100,32 @@
                                     <color key="textShadowColor" red="0.25882352939999997" green="0.31372549020000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="STREAM" id="aRb-3u-crA">
-                                        <barButtonItem key="leftBarButtonItem" image="menuImage" id="2DQ-iO-kBh">
-                                            <inset key="imageInsets" minX="-2" minY="13" maxX="31" maxY="9"/>
+                                    <navigationItem id="aRb-3u-crA">
+                                        <barButtonItem key="leftBarButtonItem" image="menu_button_.5x" id="2DQ-iO-kBh">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.8901960784313725" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FDT-Nq-wEN" secondAttribute="trailing" id="AI7-vh-5KJ"/>
                             <constraint firstAttribute="trailing" secondItem="56a-XR-26J" secondAttribute="trailing" id="Eh3-7a-2fj"/>
-                            <constraint firstAttribute="trailing" secondItem="UdP-xO-DZa" secondAttribute="trailing" constant="20" id="Kfe-Wg-KWQ"/>
+                            <constraint firstAttribute="trailing" secondItem="UdP-xO-DZa" secondAttribute="trailing" constant="14" id="Kfe-Wg-KWQ"/>
                             <constraint firstItem="56a-XR-26J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eYk-ua-LxX"/>
-                            <constraint firstAttribute="bottom" secondItem="UdP-xO-DZa" secondAttribute="bottom" constant="20" id="igu-xB-WNJ"/>
+                            <constraint firstAttribute="bottom" secondItem="UdP-xO-DZa" secondAttribute="bottom" constant="14" id="igu-xB-WNJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FDT-Nq-wEN" secondAttribute="bottom" id="tiC-yD-to9"/>
+                            <constraint firstItem="FDT-Nq-wEN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="trQ-6I-iL6"/>
                             <constraint firstItem="56a-XR-26J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uJ6-WZ-tI0"/>
+                            <constraint firstItem="FDT-Nq-wEN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="xPF-ur-vG0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addButton" destination="UdP-xO-DZa" id="nN1-x7-nex"/>
+                        <outlet property="navItem" destination="aRb-3u-crA" id="iOP-2f-eNY"/>
+                        <outlet property="navigationBar" destination="56a-XR-26J" id="Sy3-x3-GcL"/>
+                        <outlet property="tableView" destination="FDT-Nq-wEN" id="16g-b3-Rhf"/>
                         <segue destination="pRb-Wv-UPw" kind="presentation" identifier="AddContactSegue" modalPresentationStyle="overCurrentContext" id="Xbu-Uk-8cm"/>
                     </connections>
                 </viewController>
@@ -212,7 +247,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="menuImage" width="50" height="40"/>
-        <image name="plusImage" width="50" height="50"/>
+        <image name="menu_button_.5x" width="25" height="20"/>
+        <image name="plus_sign" width="50" height="50"/>
+        <image name="stream_card" width="736" height="505"/>
     </resources>
 </document>
