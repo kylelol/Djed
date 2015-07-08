@@ -44,6 +44,9 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         
         self.tableView.reloadData()
+        if addButton.alpha == 0.0 {
+            addButton.alpha = 1.0
+        }
     }
     
     @IBAction func didTapAddButton(sender: AnyObject) {
@@ -92,6 +95,7 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: KKFloatingActionButtonDelegate {
     func didTapCellAtIndexPath(indexPath: NSIndexPath) {
+        
         self.performSegueWithIdentifier("AddContactSegue", sender: nil)
         UIView.animateWithDuration(0.1, animations: { () -> Void in
             self.addButton.alpha = 0.0

@@ -84,7 +84,7 @@ class KKFloatingActionButton: UIView {
         
         UIView.animateWithDuration(0.25, animations: { () -> Void in
             self.menuTable?.alpha = 0.0
-            self.bgView?.alpha = 0
+            //self.bgView?.alpha = 0
             self.imageView.transform = CGAffineTransformIdentity
             
         }) { (success) -> Void in
@@ -162,9 +162,8 @@ extension KKFloatingActionButton: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        self.showMenu()
         self.tableDelegate?.didTapCellAtIndexPath(indexPath)
+        self.showMenu()
     }
     
 }
@@ -190,7 +189,8 @@ extension KKFloatingActionButton: UITableViewDataSource {
         cell.iconImageView.image = UIImage(named: data.1)
         
 
-        
+        cell.setNeedsLayout()
+        cell.layoutIfNeeded()
         return cell
     }
     
