@@ -30,6 +30,8 @@ class AddContactFormViewController: UIViewController {
     var dropButtons: [UIButton]!
     var actionButtons: [UIButton]!
     
+    var keyboardShown = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,6 +43,24 @@ class AddContactFormViewController: UIViewController {
         
         self.contentView.userInteractionEnabled = true
         self.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "didTapBackground:"))
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if !keyboardShown {
+        self.scrollView.contentOffset.y += 75
+            keyboardShown = true
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        
+        if keyboardShown {
+            self.scrollView.contentOffset.y -= 75
+            keyboardShown = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,10 +89,10 @@ class AddContactFormViewController: UIViewController {
     func configureView() {
         self.configureProfilePhotoButton()
         self.configureTextFields()
-        self.configureDropButtons()
+        //self.configureDropButtons()
         self.configureActionButtons()
         
-        self.scrollView.alpha = 0.0
+        //self.scrollView.alpha = 0.0
     }
     
     func configureProfilePhotoButton() {
@@ -86,6 +106,7 @@ class AddContactFormViewController: UIViewController {
             textField.rippleLocation = .Right
             textField.cornerRadius = 0
             textField.bottomBorderEnabled = true
+            textField.delegate = self
         }
     }
     
@@ -135,4 +156,23 @@ class AddContactFormViewController: UIViewController {
     }
     */
 
+}
+
+extension AddContactFormViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == self.firstNameTextField {
+            self.lastNameTextField.becomeFirstResponder()
+        } else if textField == self.lastNameTextField {
+            self.wayToRememberTextField.becomeFirstResponder()
+        } else if textField == self.wayToRememberTextField {
+            self.phoneNumberTextField.becomeFirstResponder()
+        } else if textField == self.phoneNumberTextField {
+            self.emailAddressTextField.becomeFirstResponder()
+        } else if textField == self.emailAddressTextField {
+            self.firstNameTextField.becomeFirstResponder()
+        }
+        
+        return true
+    }
 }

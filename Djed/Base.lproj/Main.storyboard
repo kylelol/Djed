@@ -18,7 +18,6 @@
             <string>MyriadPro-Regular</string>
             <string>MyriadPro-Regular</string>
             <string>MyriadPro-Regular</string>
-            <string>MyriadPro-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -136,7 +135,7 @@
                         <outlet property="navItem" destination="aRb-3u-crA" id="iOP-2f-eNY"/>
                         <outlet property="navigationBar" destination="56a-XR-26J" id="Sy3-x3-GcL"/>
                         <outlet property="tableView" destination="FDT-Nq-wEN" id="16g-b3-Rhf"/>
-                        <segue destination="o8X-67-EQT" kind="presentation" identifier="AddContactSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="Nmr-v2-UmF"/>
+                        <segue destination="o8X-67-EQT" kind="presentation" identifier="AddContactSegue" modalPresentationStyle="overFullScreen" id="Nmr-v2-UmF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -162,51 +161,51 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="580" placeholderIntrinsicHeight="600" translatesAutoresizingMaskIntoConstraints="NO" id="nV4-k2-qy6" customClass="DesignableView" customModule="Djed" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="150" width="580" height="615"/>
+                                        <rect key="frame" x="10" y="90" width="580" height="455"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bmm-1z-xEh" customClass="DesignableView" customModule="Djed" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="580" height="615"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="580" height="455"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpu-MJ-qX5">
-                                                        <rect key="frame" x="576" y="0.0" width="4" height="615"/>
+                                                        <rect key="frame" x="576" y="0.0" width="4" height="455"/>
                                                         <color key="backgroundColor" red="0.074509803920000006" green="0.38431372549999998" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="4" id="Aqv-Jk-h4L"/>
                                                         </constraints>
                                                     </view>
                                                     <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SgF-Ce-hYr" customClass="MKTextField" customModule="Djed" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="119" width="540" height="60"/>
+                                                        <rect key="frame" x="35" y="80" width="510" height="45"/>
                                                         <color key="tintColor" red="0.074509803920000006" green="0.38431372549999998" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="sKs-4D-WLL"/>
+                                                            <constraint firstAttribute="height" constant="45" id="sKs-4D-WLL"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                     <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zlq-VC-ese" customClass="MKTextField" customModule="Djed" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="201" width="540" height="60"/>
+                                                        <rect key="frame" x="35" y="145" width="510" height="45"/>
                                                         <color key="tintColor" red="0.074509803920000006" green="0.38431372549999998" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="2jI-iq-RiZ"/>
+                                                            <constraint firstAttribute="height" constant="45" id="2jI-iq-RiZ"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                     <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Way To Remember" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XrV-DE-CXt" customClass="MKTextField" customModule="Djed" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="283" width="540" height="60"/>
+                                                        <rect key="frame" x="35" y="210" width="510" height="45"/>
                                                         <color key="tintColor" red="0.074509803920000006" green="0.38431372549999998" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="5IS-jq-rjZ"/>
+                                                            <constraint firstAttribute="height" constant="45" id="5IS-jq-rjZ"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vg5-Hq-DZr">
-                                                        <rect key="frame" x="20" y="384" width="90" height="40"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vg5-Hq-DZr">
+                                                        <rect key="frame" x="35" y="283" width="87" height="31"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="icQ-jx-rra"/>
-                                                            <constraint firstAttribute="width" constant="90" id="vjQ-Gu-cda"/>
+                                                            <constraint firstAttribute="height" constant="31" id="icQ-jx-rra"/>
+                                                            <constraint firstAttribute="width" constant="87" id="vjQ-Gu-cda"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="15"/>
                                                         <state key="normal" image="drop_down">
@@ -215,20 +214,20 @@
                                                         </state>
                                                     </button>
                                                     <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KvX-MJ-M39" customClass="MKTextField" customModule="Djed" customModuleProvider="target">
-                                                        <rect key="frame" x="139" y="374" width="421" height="60"/>
+                                                        <rect key="frame" x="142" y="275" width="403" height="45"/>
                                                         <color key="tintColor" red="0.074509803920000006" green="0.38431372549999998" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="P95-dw-i3f"/>
+                                                            <constraint firstAttribute="height" constant="45" id="P95-dw-i3f"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZb-hn-p91">
-                                                        <rect key="frame" x="20" y="472" width="90" height="40"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZb-hn-p91">
+                                                        <rect key="frame" x="35" y="348" width="87" height="31"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="ULw-qT-aPm"/>
-                                                            <constraint firstAttribute="width" constant="90" id="biR-DB-BCi"/>
+                                                            <constraint firstAttribute="height" constant="31" id="ULw-qT-aPm"/>
+                                                            <constraint firstAttribute="width" constant="87" id="biR-DB-BCi"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="15"/>
                                                         <state key="normal" image="drop_down">
@@ -237,45 +236,31 @@
                                                         </state>
                                                     </button>
                                                     <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p28-vF-DZl" customClass="MKTextField" customModule="Djed" customModuleProvider="target">
-                                                        <rect key="frame" x="139" y="462" width="421" height="60"/>
+                                                        <rect key="frame" x="142" y="340" width="403" height="45"/>
                                                         <color key="tintColor" red="0.074509803920000006" green="0.38431372549999998" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="FX9-zK-RO6"/>
+                                                            <constraint firstAttribute="height" constant="45" id="FX9-zK-RO6"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaU-Rf-UQg">
-                                                        <rect key="frame" x="0.0" y="565" width="576" height="50"/>
+                                                        <rect key="frame" x="0.0" y="405" width="576" height="50"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="contactImage" translatesAutoresizingMaskIntoConstraints="NO" id="Dnb-29-5gr">
-                                                                <rect key="frame" x="20" y="16" width="20" height="20"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_contact" translatesAutoresizingMaskIntoConstraints="NO" id="Dnb-29-5gr">
+                                                                <rect key="frame" x="20" y="10" width="100" height="30"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="gaL-Ff-uIP"/>
-                                                                    <constraint firstAttribute="height" constant="20" id="hVU-gj-qSP"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="gaL-Ff-uIP"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="hVU-gj-qSP"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9d-PW-jbr">
-                                                                <rect key="frame" x="50" y="19" width="70" height="13"/>
-                                                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="13"/>
-                                                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="centerY" secondItem="p9d-PW-jbr" secondAttribute="centerY" id="9D6-qu-6nq"/>
                                                             <constraint firstItem="Dnb-29-5gr" firstAttribute="leading" secondItem="JaU-Rf-UQg" secondAttribute="leading" constant="20" id="cTU-gX-M6J"/>
                                                             <constraint firstAttribute="centerY" secondItem="Dnb-29-5gr" secondAttribute="centerY" id="fha-gq-29W"/>
-                                                            <constraint firstItem="p9d-PW-jbr" firstAttribute="leading" secondItem="Dnb-29-5gr" secondAttribute="trailing" constant="10" id="jdz-68-Pxd"/>
-                                                            <constraint firstItem="Dnb-29-5gr" firstAttribute="centerY" secondItem="p9d-PW-jbr" secondAttribute="centerY" id="l1Z-1u-Duk"/>
                                                             <constraint firstAttribute="height" constant="50" id="u7C-Hu-sBb"/>
                                                         </constraints>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="l1Z-1u-Duk"/>
-                                                            </mask>
-                                                        </variation>
                                                     </view>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sub_type_drop_down" translatesAutoresizingMaskIntoConstraints="NO" id="a4R-IA-fBL">
                                                         <rect key="frame" x="375" y="24" width="185" height="18"/>
@@ -283,33 +268,33 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="JaU-Rf-UQg" secondAttribute="bottom" id="06X-91-j58"/>
-                                                    <constraint firstAttribute="trailing" secondItem="p28-vF-DZl" secondAttribute="trailing" constant="20" id="1Cw-8c-i1A"/>
+                                                    <constraint firstAttribute="trailing" secondItem="p28-vF-DZl" secondAttribute="trailing" constant="35" id="1Cw-8c-i1A"/>
                                                     <constraint firstItem="vg5-Hq-DZr" firstAttribute="top" secondItem="XrV-DE-CXt" secondAttribute="bottom" constant="31" id="5BP-Z6-AOb"/>
-                                                    <constraint firstItem="JaU-Rf-UQg" firstAttribute="top" secondItem="p28-vF-DZl" secondAttribute="bottom" constant="43" id="5XG-6W-gEz"/>
-                                                    <constraint firstItem="Zlq-VC-ese" firstAttribute="leading" secondItem="Bmm-1z-xEh" secondAttribute="leading" constant="20" id="9sC-Fi-3nn"/>
-                                                    <constraint firstItem="SgF-Ce-hYr" firstAttribute="leading" secondItem="Bmm-1z-xEh" secondAttribute="leading" constant="20" id="C0n-gy-I6W"/>
+                                                    <constraint firstItem="JaU-Rf-UQg" firstAttribute="top" secondItem="p28-vF-DZl" secondAttribute="bottom" constant="20" id="5XG-6W-gEz"/>
+                                                    <constraint firstItem="Zlq-VC-ese" firstAttribute="leading" secondItem="Bmm-1z-xEh" secondAttribute="leading" constant="35" id="9sC-Fi-3nn"/>
+                                                    <constraint firstItem="SgF-Ce-hYr" firstAttribute="leading" secondItem="Bmm-1z-xEh" secondAttribute="leading" constant="35" id="C0n-gy-I6W"/>
                                                     <constraint firstItem="KvX-MJ-M39" firstAttribute="centerY" secondItem="vg5-Hq-DZr" secondAttribute="centerY" id="Dr3-dY-hSG"/>
-                                                    <constraint firstAttribute="trailing" secondItem="SgF-Ce-hYr" secondAttribute="trailing" constant="20" id="Hlf-NL-RvA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="SgF-Ce-hYr" secondAttribute="trailing" constant="35" id="Hlf-NL-RvA"/>
                                                     <constraint firstAttribute="trailing" secondItem="a4R-IA-fBL" secondAttribute="trailing" constant="20" id="Jad-zs-8v9"/>
                                                     <constraint firstItem="rZb-hn-p91" firstAttribute="centerY" secondItem="p28-vF-DZl" secondAttribute="centerY" id="JxD-U3-RlK"/>
                                                     <constraint firstItem="rZb-hn-p91" firstAttribute="top" secondItem="vg5-Hq-DZr" secondAttribute="bottom" constant="28" id="KTY-0Y-Or5"/>
-                                                    <constraint firstItem="KvX-MJ-M39" firstAttribute="top" secondItem="XrV-DE-CXt" secondAttribute="bottom" constant="31" id="MzR-YR-q0i"/>
-                                                    <constraint firstItem="vg5-Hq-DZr" firstAttribute="leading" secondItem="Bmm-1z-xEh" secondAttribute="leading" constant="20" id="OXR-Cz-3gF"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Zlq-VC-ese" secondAttribute="trailing" constant="20" id="SFt-Qz-mhp"/>
+                                                    <constraint firstItem="KvX-MJ-M39" firstAttribute="top" secondItem="XrV-DE-CXt" secondAttribute="bottom" constant="20" id="MzR-YR-q0i"/>
+                                                    <constraint firstItem="vg5-Hq-DZr" firstAttribute="leading" secondItem="Bmm-1z-xEh" secondAttribute="leading" constant="35" id="OXR-Cz-3gF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Zlq-VC-ese" secondAttribute="trailing" constant="35" id="SFt-Qz-mhp"/>
                                                     <constraint firstItem="Kpu-MJ-qX5" firstAttribute="top" secondItem="Bmm-1z-xEh" secondAttribute="top" id="SGJ-UZ-TOW"/>
-                                                    <constraint firstItem="Zlq-VC-ese" firstAttribute="top" secondItem="SgF-Ce-hYr" secondAttribute="bottom" constant="22" id="TXc-P7-vcP"/>
-                                                    <constraint firstItem="p28-vF-DZl" firstAttribute="top" secondItem="KvX-MJ-M39" secondAttribute="bottom" constant="28" id="U4a-gh-H4f"/>
-                                                    <constraint firstItem="XrV-DE-CXt" firstAttribute="top" secondItem="Zlq-VC-ese" secondAttribute="bottom" constant="22" id="Ue1-N9-fcq"/>
+                                                    <constraint firstItem="Zlq-VC-ese" firstAttribute="top" secondItem="SgF-Ce-hYr" secondAttribute="bottom" constant="20" id="TXc-P7-vcP"/>
+                                                    <constraint firstItem="p28-vF-DZl" firstAttribute="top" secondItem="KvX-MJ-M39" secondAttribute="bottom" constant="20" id="U4a-gh-H4f"/>
+                                                    <constraint firstItem="XrV-DE-CXt" firstAttribute="top" secondItem="Zlq-VC-ese" secondAttribute="bottom" constant="20" id="Ue1-N9-fcq"/>
                                                     <constraint firstItem="JaU-Rf-UQg" firstAttribute="leading" secondItem="Bmm-1z-xEh" secondAttribute="leading" id="VEX-wZ-7P7"/>
-                                                    <constraint firstItem="XrV-DE-CXt" firstAttribute="leading" secondItem="Bmm-1z-xEh" secondAttribute="leading" constant="20" id="d5b-Nr-v0C"/>
-                                                    <constraint firstAttribute="trailing" secondItem="XrV-DE-CXt" secondAttribute="trailing" constant="20" id="ddd-EY-avJ"/>
-                                                    <constraint firstItem="rZb-hn-p91" firstAttribute="leading" secondItem="Bmm-1z-xEh" secondAttribute="leading" constant="20" id="fEO-lI-qhd"/>
+                                                    <constraint firstItem="XrV-DE-CXt" firstAttribute="leading" secondItem="Bmm-1z-xEh" secondAttribute="leading" constant="35" id="d5b-Nr-v0C"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XrV-DE-CXt" secondAttribute="trailing" constant="35" id="ddd-EY-avJ"/>
+                                                    <constraint firstItem="rZb-hn-p91" firstAttribute="leading" secondItem="Bmm-1z-xEh" secondAttribute="leading" constant="35" id="fEO-lI-qhd"/>
                                                     <constraint firstAttribute="bottom" secondItem="Kpu-MJ-qX5" secondAttribute="bottom" id="fs8-dr-Mnl"/>
-                                                    <constraint firstItem="p28-vF-DZl" firstAttribute="leading" secondItem="rZb-hn-p91" secondAttribute="trailing" constant="29" id="jNZ-Jm-BKv"/>
+                                                    <constraint firstItem="p28-vF-DZl" firstAttribute="leading" secondItem="rZb-hn-p91" secondAttribute="trailing" constant="20" id="jNZ-Jm-BKv"/>
                                                     <constraint firstItem="a4R-IA-fBL" firstAttribute="top" secondItem="Bmm-1z-xEh" secondAttribute="top" constant="24" id="mH8-ne-uiO"/>
                                                     <constraint firstAttribute="trailing" secondItem="Kpu-MJ-qX5" secondAttribute="trailing" id="pU0-h0-22j"/>
-                                                    <constraint firstItem="KvX-MJ-M39" firstAttribute="leading" secondItem="vg5-Hq-DZr" secondAttribute="trailing" constant="29" id="qZ9-8G-cjK"/>
-                                                    <constraint firstAttribute="trailing" secondItem="KvX-MJ-M39" secondAttribute="trailing" constant="20" id="umM-4L-5FG"/>
+                                                    <constraint firstItem="KvX-MJ-M39" firstAttribute="leading" secondItem="vg5-Hq-DZr" secondAttribute="trailing" constant="20" id="qZ9-8G-cjK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KvX-MJ-M39" secondAttribute="trailing" constant="35" id="umM-4L-5FG"/>
                                                     <constraint firstItem="Kpu-MJ-qX5" firstAttribute="leading" secondItem="JaU-Rf-UQg" secondAttribute="trailing" id="yP8-7o-oRN"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -324,7 +309,7 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35d-Lg-Q1C" customClass="DesignableButton" customModule="Djed" customModuleProvider="target">
+                                            <button hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35d-Lg-Q1C" customClass="DesignableButton" customModule="Djed" customModuleProvider="target">
                                                 <rect key="frame" x="225" y="-65" width="130" height="130"/>
                                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -340,12 +325,18 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_photo" translatesAutoresizingMaskIntoConstraints="NO" id="mcT-pU-fBD">
+                                                <rect key="frame" x="225" y="-65" width="130" height="130"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="SgF-Ce-hYr" firstAttribute="top" secondItem="35d-Lg-Q1C" secondAttribute="bottom" constant="54" id="0pW-c6-NUp"/>
+                                            <constraint firstItem="SgF-Ce-hYr" firstAttribute="top" secondItem="35d-Lg-Q1C" secondAttribute="bottom" constant="15" id="0pW-c6-NUp"/>
+                                            <constraint firstItem="mcT-pU-fBD" firstAttribute="centerX" secondItem="35d-Lg-Q1C" secondAttribute="centerX" id="4vd-gu-J7j"/>
+                                            <constraint firstItem="mcT-pU-fBD" firstAttribute="width" secondItem="35d-Lg-Q1C" secondAttribute="width" id="5Ee-ft-cQX"/>
                                             <constraint firstAttribute="bottom" secondItem="Bmm-1z-xEh" secondAttribute="bottom" id="5nk-aQ-R3f"/>
                                             <constraint firstItem="Bmm-1z-xEh" firstAttribute="leading" secondItem="nV4-k2-qy6" secondAttribute="leading" id="BDx-Du-xht"/>
+                                            <constraint firstItem="mcT-pU-fBD" firstAttribute="centerY" secondItem="35d-Lg-Q1C" secondAttribute="centerY" id="FYC-Va-KkX"/>
                                             <constraint firstAttribute="trailing" secondItem="Bmm-1z-xEh" secondAttribute="trailing" id="Ic9-0T-gTC"/>
                                             <constraint firstAttribute="centerX" secondItem="35d-Lg-Q1C" secondAttribute="centerX" id="RhY-9P-8CZ"/>
                                             <constraint firstItem="35d-Lg-Q1C" firstAttribute="centerY" secondItem="nV4-k2-qy6" secondAttribute="top" id="W89-vz-90w"/>
@@ -354,6 +345,7 @@
                                             <constraint firstItem="Bmm-1z-xEh" firstAttribute="top" secondItem="35d-Lg-Q1C" secondAttribute="bottom" id="aJ4-Pw-eJQ"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="dtV-OE-ebA"/>
                                             <constraint firstItem="a4R-IA-fBL" firstAttribute="leading" secondItem="35d-Lg-Q1C" secondAttribute="trailing" constant="20" id="xxW-DL-XYw"/>
+                                            <constraint firstItem="mcT-pU-fBD" firstAttribute="height" secondItem="35d-Lg-Q1C" secondAttribute="height" id="zZT-aD-O5r"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -383,7 +375,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="nV4-k2-qy6" firstAttribute="leading" secondItem="l21-69-IVK" secondAttribute="leading" constant="10" id="Glz-mI-fJX"/>
-                                    <constraint firstItem="nV4-k2-qy6" firstAttribute="top" secondItem="l21-69-IVK" secondAttribute="top" constant="150" id="PxJ-5t-gHP"/>
+                                    <constraint firstItem="nV4-k2-qy6" firstAttribute="top" secondItem="l21-69-IVK" secondAttribute="top" constant="90" id="PxJ-5t-gHP"/>
                                     <constraint firstAttribute="bottom" secondItem="nV4-k2-qy6" secondAttribute="bottom" constant="20" id="aaa-Ys-srr"/>
                                     <constraint firstAttribute="trailing" secondItem="nV4-k2-qy6" secondAttribute="trailing" constant="10" id="s9i-Fh-2Qa"/>
                                     <constraint firstAttribute="centerX" secondItem="nV4-k2-qy6" secondAttribute="centerX" id="uxO-hH-rN7"/>
@@ -397,7 +389,7 @@
                                     <constraint firstAttribute="height" constant="40" id="AdA-ne-b2a"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="15"/>
-                                <state key="normal" title="Save">
+                                <state key="normal" title="SAVE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -413,7 +405,7 @@
                                     <constraint firstAttribute="width" constant="80" id="Mpe-VH-6EZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="15"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="CANCEL">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -676,7 +668,9 @@
         <image name="contactImage" width="35" height="40"/>
         <image name="drop_down" width="174" height="62"/>
         <image name="menu_button_.5x" width="25" height="20"/>
+        <image name="new_contact" width="204" height="27"/>
         <image name="plus_sign" width="50" height="50"/>
+        <image name="profile_photo" width="250" height="250"/>
         <image name="stream_card" width="736" height="505"/>
         <image name="sub_type_drop_down" width="147" height="18"/>
     </resources>
